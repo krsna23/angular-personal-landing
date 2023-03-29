@@ -8,9 +8,12 @@ import { ContentComponent } from './Home/content/content.component';
 
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', component: ContentComponent },
-  { path: 'about', component: AboutComponent },
-  {path: 'projects', component: ProjectsComponent},
+  { path: '', pathMatch: 'full', loadChildren: () => import('./Home/content/content-routing.module')
+  .then(m => m.ContentRoutingModule) },
+  {  path: 'about', loadChildren: () => import('./features/about/about-routing.module')
+  .then(m => m.AboutRoutingModule) },
+  {path: 'projects', loadChildren: () => import('./features/projects/projects-routing.module')
+  .then(m => m.ProjectsRoutingModule)},
   {path: 'contacts', component: ContactComponent}
 ];
 
