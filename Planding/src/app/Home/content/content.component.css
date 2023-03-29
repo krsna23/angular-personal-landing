@@ -8,6 +8,7 @@
 .line{
     display: flex;
 }
+
 .hello{
     font-size: 4.5vw;
 }
@@ -19,7 +20,7 @@
 
 .name{
     font-size:6vw;
-    margin-left: 2vw;
+    margin-left: 3px;
     color: #D396BE;
 }
 
@@ -37,30 +38,26 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 4vw;
+  font-size: 3vw;
   font-weight: bold;
-  margin-left: 10vw;
-  margin-bottom: 10vh;
+  margin-top: 16vh;
+  margin-bottom: 3vh;
 }
 
 .mid {
     display: flex;
   }
 
-.rect{
-    background-color: #E1AD01;
-    width: 26vw;
-    height: 30vw;
-    margin-left: 21vw;
-}
-
 .photo{
-    height: 30vw;
-    width: 26vw;
+    height: 35vw;
+    width: 28vw;
+    margin-left: 12vw;
+    opacity: 60%;
+    border-radius: 8vw;
 }
 
 
 /*For making mobile responsive:*/
 @media screen and (max-width: 767px) {
-    
+
 }
