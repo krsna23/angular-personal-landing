@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { ModalComponent } from 'src/app/shared/modal/modal.component';
 
 @Component({
   selector: 'app-content',
@@ -6,4 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./content.component.css']
 })
 
-export class ContentComponent {}
+export class ContentComponent {
+  constructor() {}
+  
+  ngOnInit() {}
+}

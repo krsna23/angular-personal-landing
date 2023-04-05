@@ -5,7 +5,7 @@ import { AboutComponent } from './features/about/about.component';
 import { ProjectsComponent } from './features/projects/projects.component';
 import { ContactComponent } from './features/contact/contact.component';
 import { ContentComponent } from './Home/content/content.component';
-
+import { ModalComponent } from './shared/modal/modal.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', loadChildren: () => import('./Home/content/content-routing.module')
@@ -14,7 +14,8 @@ const routes: Routes = [
   .then(m => m.AboutRoutingModule) },
   {path: 'projects', loadChildren: () => import('./features/projects/projects-routing.module')
   .then(m => m.ProjectsRoutingModule)},
-  {path: 'contacts', component: ContactComponent}
+  {path: 'contacts', component: ContactComponent},
+  { path: 'modal', component: ModalComponent}
 ];
 
 @NgModule({

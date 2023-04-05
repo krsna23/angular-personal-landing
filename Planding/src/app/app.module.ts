@@ -5,22 +5,23 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContentComponent } from './Home/content/content.component';
-
+import { SharedModule } from "./shared/shared.module";
 
 const routes: Routes = []
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ContentComponent
-  ],
-  imports: [
-    RouterModule,
-    BrowserModule,
-    AppRoutingModule,
-  ],
-  exports: [ContentComponent],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        ContentComponent, 
+    ],
+    exports: [ContentComponent],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        RouterModule,
+        BrowserModule,
+        AppRoutingModule,
+        SharedModule
+    ]
 })
 export class AppModule { }
