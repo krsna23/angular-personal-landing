@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
+import { FeaturesModule } from './features/features.module';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContentComponent } from './Home/content/content.component';
+
 import { SharedModule } from "./shared/shared.module";
 
 const routes: Routes = []
@@ -21,7 +24,8 @@ const routes: Routes = []
         RouterModule,
         BrowserModule,
         AppRoutingModule,
-        SharedModule
-    ]
+        SharedModule,
+        FeaturesModule
+        ]   
 })
 export class AppModule { }

@@ -13,6 +13,7 @@
     margin: 3vw;
     font-family: cursive;
     margin-left: 8vw;
+    margin-top: 5vh;
 }
 
 .ul1{
@@ -37,6 +38,7 @@
 
 .about{
     display: flex;
+    margin-top: 5vh;
 }
 
 .heading2{

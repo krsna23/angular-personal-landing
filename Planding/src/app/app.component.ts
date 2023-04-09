@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
+import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -7,5 +7,11 @@ import { AppRoutingModule } from './app-routing.module';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Planding';
+
+  isSmallScreen!: boolean;
+
+  ngOnInit(){
+    this.isSmallScreen = window.screen.width<768;
+    console.log(this.isSmallScreen);
+  }
 }

@@ -31,7 +31,6 @@ export class ModalComponent {
   }
 
   onSubmit(){
-    console.log("form submitted.");
     const email= this.emailForm.value;
     console.log(email);
   }

@@ -17,6 +17,9 @@ import { ContactComponent } from './contact/contact.component';
   imports: [
     CommonModule,
     FeaturesRoutingModule
+  ],
+  exports: [
+    AboutComponent
   ]
 })
 
