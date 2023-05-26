@@ -6,10 +6,10 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApiService {
-  constructor(private httpClient: HttpClient) {}
+  constructor(private http: HttpClient) {}
 
   getData(){
-    return this.httpClient.get<any>('https://example.com/api/data');
+    return this.http.get<any>('https://example.com/api/data');
   }
-  
+
 }
