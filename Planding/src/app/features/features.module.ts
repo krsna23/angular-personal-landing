@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { FeaturesRoutingModule } from './features-routing.module';
+
 import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { CertificationsComponent } from './certifications/certifications.component';
 import { ContactComponent } from './contact/contact.component';
+import { ContentComponent } from '../Home/content/content.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ContactComponent } from './contact/contact.component';
     FeaturesRoutingModule
   ],
   exports: [
-    AboutComponent
+    AboutComponent,
+    ContactComponent
   ]
 })
 
