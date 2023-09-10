@@ -9,7 +9,6 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   getData(){
-    return this.http.get<any>('https://example.com/api/data');
-  }
-
+    return this.http.get('https://localhost:3000/client');
+    };
 }

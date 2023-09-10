@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ApiService } from 'src/app/api.service';
 
 
 @Component({
@@ -9,6 +10,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 
 export class ModalComponent {
+  data: any;
 
   emailForm= new FormGroup({
     name: new FormControl('', [
@@ -16,12 +18,20 @@ export class ModalComponent {
     ])
   });
 
-  constructor() {}
+  constructor(private apiService: ApiService) {}
   
   ngOnInit() {}
-  
   displayStyle = "none";
+  displayStyleProjects = "none";
+
+  openProjectsPopup() {
+    this.displayStyleProjects = "block";
+  }
   
+  closeProjectsPopup() {
+    this.displayStyleProjects = "none";
+  }
+
   openPopup() {
     this.displayStyle = "block";
   }
@@ -33,6 +43,12 @@ export class ModalComponent {
   onSubmit(){
     const email= this.emailForm.value;
     console.log(email);
+    this.fetchData();
   }
 
+  fetchData(){
+    this.apiService.getData().subscribe( response =>{
+      this.data  = response;
+    });
+  }
 }
